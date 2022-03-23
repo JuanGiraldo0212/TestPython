@@ -19,6 +19,7 @@ def run_circuit(qc):
 def main():
     qc = QuantumCircuit(2, 2)
     qc.h(0)
+    qc.x(1)
     qc.cx(0, 1)
     qc.measure([0,1],[0,1])
     print("\nTotal count for 00 and 11 are:", run_circuit(qc))
